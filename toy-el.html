@@ -1,0 +1,39 @@
+<link rel="import" href="../polymer/polymer.html">
+<link rel="import" href="../iron-icons/iron-icons.html">
+
+<dom-module id="toy-el">
+  <template>
+    <style>
+      :host {
+        display: block;
+      }
+
+       .big {
+        --iron-icon-height: 32px;
+        --iron-icon-width: 32px;
+        --iron-icon-fill-color:red;
+      }
+
+
+    </style>
+    <h2>Hello [[prop1]]</h2>
+    
+
+    <iron-icon class="big" icon="flight-land"></iron-icon>
+  </template>
+
+  <script>
+    Polymer({
+
+      is: 'toy-el',
+
+      properties: {
+        prop1: {
+          type: String,
+          value: 'toy-el',
+        },
+      },
+
+    });
+  </script>
+</dom-module>

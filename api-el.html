@@ -1,0 +1,54 @@
+<link rel="import" href="../polymer/polymer.html">
+<link rel="import" href="../iron-icons/iron-icons.html">
+
+<dom-module id="api-el">
+  <template>
+    <style>
+      :host {
+        display: inline-block;
+        border: 2px solid black;
+        border-radius: 8px;
+        text-align: center;
+        background-color: red;
+      }
+
+      .tag {
+        margin:  16px 0;
+        padding: 4px;
+        background-color: white;
+      }
+
+    </style>
+    <h2>{{first}}, {{last}}</h2>
+    <span> {{age}}</span></br>
+    <div class="tag">{{fullName}}<div>
+  </template>
+
+  <script>
+    Polymer({
+
+      is: 'api-el',
+
+      properties: {
+        first: String,
+        last: String,
+        age: {
+          type: Number,
+          value: 24,
+          oberver: '_ageChanged',
+          notify: true
+        },
+        fullName:{
+          computed:'computeFullName(first,last)'
+        },
+
+       
+
+      },
+       computeFullName: function(first, last){
+          return first + "N." + last;
+        }
+
+    });
+  </script>
+</dom-module>

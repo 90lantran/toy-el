@@ -1,0 +1,30 @@
+<link rel="import" href="../polymer/polymer.html">
+<link rel="import" href="../iron-icons/iron-icons.html">
+
+<dom-module id="my-button">
+  <template>
+    <style>
+      :host {
+        display: block;
+      }
+
+      
+    <content></content>
+  </template>
+
+  <script>
+    Polymer({
+
+      is: 'my-button',
+      extends: 'button';
+
+      properties: {
+        prop1: {
+          type: String,
+          value: 'toy-el',
+        },
+      },
+
+    });
+  </script>
+</dom-module>
